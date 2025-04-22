@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
 )
 
-from config import config
+from storage.config import config
 
 
 class DataBaseHelper:

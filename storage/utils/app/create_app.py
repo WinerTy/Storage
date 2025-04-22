@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
-from database.helper import db_helper
+from storage.database.helper import db_helper
 
 
 @asynccontextmanager

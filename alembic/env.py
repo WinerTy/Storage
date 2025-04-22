@@ -6,8 +6,8 @@ from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
-from config import config as app_config
-from models import BaseModel
+from storage.config import config as app_config
+from storage.models import BaseModel
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -25,6 +25,7 @@ if config.config_file_name is not None:
 target_metadata = BaseModel.metadata
 
 config.set_main_option("sqlalchemy.url", str(app_config.db.url))
+
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
